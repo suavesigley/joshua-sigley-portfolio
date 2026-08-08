@@ -968,3 +968,53 @@ footer {
     }
 
 }
+.additional-training {
+    margin-top: 4rem;
+}
+
+
+.training-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1rem;
+}
+
+
+.training-grid > div {
+    padding: 1.5rem;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: rgba(13, 20, 34, 0.5);
+}
+
+
+.training-grid strong {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    color: var(--text-secondary);
+
+    font-size: 0.9rem;
+}
+
+
+.training-grid p {
+    color: var(--text-muted);
+
+    font-size: 0.78rem;
+}
+
+
+@media (max-width: 900px) {
+
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
