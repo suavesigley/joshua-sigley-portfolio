@@ -10,19 +10,26 @@
 
     <meta
         name="description"
-        content="Joshua Sigley — Cyber Security Analyst portfolio showcasing security investigations, labs, threat detection and defensive security projects."
+        content="Joshua Sigley — Cyber Security Analyst portfolio showcasing security operations, threat detection, incident investigations and practical cybersecurity projects."
     >
 
-    <title>Josh Sigley | Cyber Security Analyst</title>
+    <meta
+        name="author"
+        content="Joshua Sigley"
+    >
+
+    <title>Joshua Sigley | Cyber Security Analyst</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-            <a href="/" class="logo">
+    <!-- Navigation -->
+    <header class="site-header">
+        <nav class="navigation">
+
+            <a href="#top" class="logo">
                 JOSHUA SIGLEY
             </a>
 
@@ -31,82 +38,578 @@
                 <a href="#projects">Projects</a>
                 <a href="#labs">Labs</a>
                 <a href="#certifications">Certifications</a>
-                <a href="#blog">Blog</a>
-                <a href="#contact">Contact</a>
+                <a href="#writing">Writing</a>
             </div>
+
+            <a href="#contact" class="nav-contact">
+                Contact
+            </a>
+
         </nav>
     </header>
 
 
-    <main>
+    <main id="top">
 
         <!-- Hero -->
-        <section id="hero">
-            <p>CYBER SECURITY ANALYST</p>
+        <section class="hero">
 
-            <h1>
-                Security Operations.
-                <br>
-                Threat Detection.
-                <br>
-                Incident Investigation.
-            </h1>
+            <div class="hero-content">
 
-            <p>
-                Building practical cybersecurity capability through
-                hands-on labs, security investigations and defensive
-                security projects.
-            </p>
+                <p class="eyebrow">
+                    CYBER SECURITY ANALYST
+                </p>
 
-            <div>
-                <a href="#projects">View Projects</a>
-                <a href="#contact">Contact Me</a>
+                <h1>
+                    Security Operations.
+                    <br>
+                    Threat Detection.
+                    <br>
+                    Incident Investigation.
+                </h1>
+
+                <p class="hero-description">
+                    Building practical cybersecurity capability through
+                    hands-on security investigations, defensive security
+                    labs and threat analysis.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#projects"
+                        class="button button-primary"
+                    >
+                        View Projects
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="button button-secondary"
+                    >
+                        Contact Me
+                    </a>
+
+                </div>
+
+                <div class="social-links">
+
+                    <a
+                        href="https://github.com/suavesigley"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <span>•</span>
+
+                    <a
+                        href="https://www.linkedin.com/in/suavesigley/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                </div>
+
             </div>
+
+
+            <!-- Visual status panel -->
+            <div class="hero-panel">
+
+                <div class="panel-header">
+                    <span>SECURITY PROFILE</span>
+                    <span class="status-indicator">
+                        ACTIVE
+                    </span>
+                </div>
+
+                <div class="panel-line"></div>
+
+                <div class="profile-item">
+                    <span>Focus</span>
+                    <strong>Security Operations</strong>
+                </div>
+
+                <div class="profile-item">
+                    <span>Threat Analysis</span>
+                    <strong>Active</strong>
+                </div>
+
+                <div class="profile-item">
+                    <span>Incident Response</span>
+                    <strong>Developing</strong>
+                </div>
+
+                <div class="profile-item">
+                    <span>SIEM / Log Analysis</span>
+                    <strong>Hands-on</strong>
+                </div>
+
+                <div class="panel-footer">
+                    <span>JOSHUA SIGLEY</span>
+                    <span>2026</span>
+                </div>
+
+            </div>
+
         </section>
 
 
-        <!-- About -->
-        <section id="about">
-            <h2>About</h2>
+        <!-- Capability overview -->
+        <section class="capabilities">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    PRACTICAL CAPABILITY
+                </p>
+
+                <h2>
+                    Security work backed by evidence.
+                </h2>
+
+                <p>
+                    My portfolio documents practical security investigations,
+                    technical labs and structured analysis rather than
+                    relying solely on certifications or theoretical knowledge.
+                </p>
+
+            </div>
+
+
+            <div class="capability-grid">
+
+                <article class="capability-card">
+
+                    <span class="card-number">01</span>
+
+                    <h3>
+                        Security Operations
+                    </h3>
+
+                    <p>
+                        SIEM platforms, security monitoring, log analysis
+                        and investigation workflows.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>SIEM</span>
+                        <span>Log Analysis</span>
+                        <span>Monitoring</span>
+                    </div>
+
+                </article>
+
+
+                <article class="capability-card">
+
+                    <span class="card-number">02</span>
+
+                    <h3>
+                        Threat Detection
+                    </h3>
+
+                    <p>
+                        Analysing suspicious activity, indicators of
+                        compromise and attacker behaviour.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>IOC Analysis</span>
+                        <span>Threat Intel</span>
+                        <span>MITRE ATT&CK</span>
+                    </div>
+
+                </article>
+
+
+                <article class="capability-card">
+
+                    <span class="card-number">03</span>
+
+                    <h3>
+                        Incident Investigation
+                    </h3>
+
+                    <p>
+                        Structured investigation of phishing, authentication
+                        attacks and other security events.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>Investigation</span>
+                        <span>Windows Logs</span>
+                        <span>Reporting</span>
+                    </div>
+
+                </article>
+
+            </div>
+
         </section>
 
 
         <!-- Projects -->
         <section id="projects">
-            <h2>Featured Projects</h2>
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    SELECTED WORK
+                </p>
+
+                <h2>
+                    Featured Projects
+                </h2>
+
+                <p>
+                    Practical cybersecurity projects demonstrating
+                    investigation, analysis and defensive security skills.
+                </p>
+
+            </div>
+
+
+            <div class="project-grid">
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <p class="project-type">
+                        INCIDENT INVESTIGATION
+                    </p>
+
+                    <h3>
+                        Windows Password Spray Investigation
+                    </h3>
+
+                    <p>
+                        Analysis of authentication failures, suspicious
+                        login patterns and potential password spraying
+                        activity.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>Windows</span>
+                        <span>Event Logs</span>
+                        <span>MITRE ATT&CK</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <p class="project-type">
+                        THREAT ANALYSIS
+                    </p>
+
+                    <h3>
+                        Phishing Investigation
+                    </h3>
+
+                    <p>
+                        Investigation of a suspicious email using threat
+                        intelligence, sandbox analysis and IOC research.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>VirusTotal</span>
+                        <span>Any.Run</span>
+                        <span>IOC Analysis</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Case Study →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <p class="project-type">
+                        SECURITY OPERATIONS
+                    </p>
+
+                    <h3>
+                        Wazuh SIEM Security Lab
+                    </h3>
+
+                    <p>
+                        Hands-on security monitoring environment focused
+                        on endpoint visibility, log analysis and detection.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>Wazuh</span>
+                        <span>SIEM</span>
+                        <span>Detection</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project →
+                    </a>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        04
+                    </div>
+
+                    <p class="project-type">
+                        APPLICATION SECURITY
+                    </p>
+
+                    <h3>
+                        Portfolio Security Assessment
+                    </h3>
+
+                    <p>
+                        Security assessment of this website covering
+                        security headers, CSP, TLS and third-party resources.
+                    </p>
+
+                    <div class="card-tags">
+                        <span>OWASP</span>
+                        <span>CSP</span>
+                        <span>TLS</span>
+                    </div>
+
+                    <a href="#" class="project-link">
+                        Coming Soon →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section id="about">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    ABOUT
+                </p>
+
+                <h2>
+                    Building practical defensive security capability.
+                </h2>
+
+            </div>
+
+            <div class="about-content">
+
+                <p>
+                    I'm Joshua Sigley, a cybersecurity practitioner focused
+                    on security operations, threat detection and incident
+                    investigation.
+                </p>
+
+                <p>
+                    My portfolio documents hands-on security investigations,
+                    technical labs and structured security reporting across
+                    areas including SIEM, threat intelligence, Windows
+                    security events, network analysis and MITRE ATT&CK.
+                </p>
+
+                <p>
+                    I'm seeking an opportunity to begin my professional
+                    career in a junior SOC or cybersecurity role where I can
+                    contribute to a security team while continuing to develop
+                    my defensive security capabilities.
+                </p>
+
+            </div>
+
         </section>
 
 
         <!-- Labs -->
         <section id="labs">
-            <h2>Security Labs</h2>
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    HANDS-ON ENVIRONMENTS
+                </p>
+
+                <h2>
+                    Security Labs
+                </h2>
+
+            </div>
+
+            <div class="lab-grid">
+
+                <article class="lab-card">
+                    <h3>SIEM & Monitoring</h3>
+                    <p>
+                        Wazuh and Splunk environments for security monitoring,
+                        event analysis and detection development.
+                    </p>
+                </article>
+
+                <article class="lab-card">
+                    <h3>Network Security</h3>
+                    <p>
+                        Network traffic analysis and reconnaissance using
+                        tools such as Wireshark and Nmap.
+                    </p>
+                </article>
+
+                <article class="lab-card">
+                    <h3>Threat Analysis</h3>
+                    <p>
+                        Malware and suspicious-file investigation using
+                        threat intelligence and sandboxing platforms.
+                    </p>
+                </article>
+
+            </div>
+
         </section>
 
 
         <!-- Certifications -->
         <section id="certifications">
-            <h2>Certifications & Training</h2>
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    PROFESSIONAL DEVELOPMENT
+                </p>
+
+                <h2>
+                    Certifications & Training
+                </h2>
+
+            </div>
+
+            <div class="certification-list">
+
+                <div class="certification-item">
+                    <span>01</span>
+                    <strong>Google Cybersecurity Certificate</strong>
+                    <small>Completed</small>
+                </div>
+
+                <div class="certification-item">
+                    <span>02</span>
+                    <strong>CompTIA Security+</strong>
+                    <small>In Progress</small>
+                </div>
+
+                <div class="certification-item">
+                    <span>03</span>
+                    <strong>TryHackMe</strong>
+                    <small>Hands-on Training</small>
+                </div>
+
+            </div>
+
         </section>
 
 
-        <!-- Blog -->
-        <section id="blog">
-            <h2>Security Writing</h2>
+        <!-- Writing -->
+        <section id="writing">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    SECURITY WRITING
+                </p>
+
+                <h2>
+                    Research, lessons and technical notes.
+                </h2>
+
+                <p>
+                    Technical writing documenting what I learn, build
+                    and investigate throughout my cybersecurity journey.
+                </p>
+
+            </div>
+
         </section>
 
 
         <!-- Contact -->
         <section id="contact">
-            <h2>Let's Connect</h2>
+
+            <div class="contact-panel">
+
+                <p class="eyebrow">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    Let's connect.
+                </h2>
+
+                <p>
+                    I'm open to junior cybersecurity and SOC opportunities,
+                    technical discussions and professional networking.
+                </p>
+
+                <a
+                    href="mailto:YOUR-PROFESSIONAL-EMAIL"
+                    class="button button-primary"
+                >
+                    Email Me
+                </a>
+
+            </div>
+
         </section>
 
     </main>
 
 
     <footer>
-        <p>
-            © 2026 Joshua Sigley. All rights reserved.
-        </p>
+
+        <div class="footer-content">
+
+            <strong>
+                JOSHUA SIGLEY
+            </strong>
+
+            <span>
+                Cyber Security Analyst
+            </span>
+
+            <span>
+                © 2026 Joshua Sigley
+            </span>
+
+        </div>
+
     </footer>
 
 
