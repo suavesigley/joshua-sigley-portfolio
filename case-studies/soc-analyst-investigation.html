@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="SOC Analyst Investigation and Incident Response case study by Joshua Sigley."
+    >
+
+    <title>
+        SOC Investigation & Incident Response | Joshua Sigley
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a
+                href="../index.html"
+                class="logo"
+            >
+                JOSHUA SIGLEY
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="../index.html#about">
+                    About
+                </a>
+
+                <a href="../index.html#projects">
+                    Projects
+                </a>
+
+                <a href="../index.html#labs">
+                    Labs
+                </a>
+
+                <a href="../index.html#certifications">
+                    Certifications
+                </a>
+
+                <a href="../index.html#blog">
+                    Blog
+                </a>
+
+                <a href="../index.html#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- Case Study Hero -->
+
+    <main>
+
+        <section class="case-study-hero">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    CASE STUDY / SECURITY OPERATIONS
+                </p>
+
+                <h1>
+                    SOC Analyst Investigation
+                    & Incident Response
+                </h1>
+
+                <p class="hero-description">
+                    Windows Password Spraying & Endpoint Compromise
+                </p>
+
+                <div class="case-study-meta">
+
+                    <span>
+                        Simulated SOC Investigation
+                    </span>
+
+                    <span>
+                        Windows Security
+                    </span>
+
+                    <span>
+                        Incident Response
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Executive Summary -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    01 / EXECUTIVE SUMMARY
+                </p>
+
+                <h2>
+                    Investigating a Potential Endpoint Compromise
+                </h2>
+
+                <p>
+                    This case study documents a simulated SOC investigation
+                    involving suspected password spraying followed by
+                    successful authentication and suspicious PowerShell
+                    activity on a Windows endpoint.
+                </p>
+
+                <p>
+                    The investigation followed a structured security
+                    operations workflow, beginning with alert triage and
+                    authentication analysis before progressing into endpoint,
+                    process and PowerShell investigation.
+                </p>
+
+                <p>
+                    The objective was to determine what occurred, identify
+                    the systems and accounts involved, assess the likelihood
+                    of compromise and develop appropriate containment and
+                    remediation recommendations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Scenario -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    02 / SCENARIO
+                </p>
+
+                <h2>
+                    Investigation Scenario
+                </h2>
+
+                <p>
+                    The investigation began with suspicious Windows
+                    authentication activity consistent with a potential
+                    password spraying attack.
+                </p>
+
+                <p>
+                    Multiple authentication attempts were analysed before
+                    identifying a successful authentication associated with
+                    the activity. The investigation then expanded to the
+                    affected endpoint to determine whether additional
+                    suspicious activity had occurred following authentication.
+                </p>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+
+                        <h3>
+                            Investigation Type
+                        </h3>
+
+                        <p>
+                            Simulated SOC incident investigation
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <h3>
+                            Primary Platform
+                        </h3>
+
+                        <p>
+                            Windows endpoint
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <h3>
+                            Initial Concern
+                        </h3>
+
+                        <p>
+                            Password spraying and unauthorised authentication
+                        </p>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <h3>
+                            Investigation Focus
+                        </h3>
+
+                        <p>
+                            Authentication, PowerShell and endpoint activity
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Investigation Objective -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    03 / OBJECTIVE
+                </p>
+
+                <h2>
+                    Investigation Objectives
+                </h2>
+
+                <ul class="case-study-list">
+
+                    <li>
+                        Determine whether the authentication activity was
+                        consistent with password spraying.
+                    </li>
+
+                    <li>
+                        Identify the accounts, source activity and endpoint
+                        associated with the successful authentication.
+                    </li>
+
+                    <li>
+                        Investigate activity occurring after authentication.
+                    </li>
+
+                    <li>
+                        Analyse suspicious PowerShell execution and remote
+                        script retrieval.
+                    </li>
+
+                    <li>
+                        Identify relevant adversary behaviours and map them
+                        to MITRE ATT&CK where appropriate.
+                    </li>
+
+                    <li>
+                        Assess the potential impact and severity of the
+                        incident.
+                    </li>
+
+                    <li>
+                        Develop containment, remediation and monitoring
+                        recommendations.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Attack Chain -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    04 / ATTACK CHAIN
+                </p>
+
+                <h2>
+                    Observed Investigation Chain
+                </h2>
+
+                <div class="attack-chain">
+
+                    <div>
+                        Password Spraying
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        Multiple Accounts Targeted
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        Successful Authentication
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        Endpoint Identified
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        Suspicious PowerShell Execution
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        Remote Script Retrieved
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        IEX / PowerShell Execution
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        Host & Security Context Discovery
+                    </div>
+
+                    <span>↓</span>
+
+                    <div>
+                        Endpoint Compromise Assessment
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Investigation Methodology -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    05 / METHODOLOGY
+                </p>
+
+                <h2>
+                    Investigation Workflow
+                </h2>
+
+                <div class="methodology-grid">
+
+                    <div class="methodology-card">
+
+                        <span>
+                            01
+                        </span>
+
+                        <h3>
+                            Detect
+                        </h3>
+
+                        <p>
+                            Identify suspicious activity from authentication
+                            events and available security telemetry.
+                        </p>
+
+                    </div>
+
+
+                    <div class="methodology-card">
+
+                        <span>
+                            02
+                        </span>
+
+                        <h3>
+                            Triage
+                        </h3>
+
+                        <p>
+                            Establish the initial scope, affected accounts,
+                            systems and apparent severity.
+                        </p>
+
+                    </div>
+
+
+                    <div class="methodology-card">
+
+                        <span>
+                            03
+                        </span>
+
+                        <h3>
+                            Correlate
+                        </h3>
+
+                        <p>
+                            Correlate authentication events with endpoint,
+                            process and PowerShell activity.
+                        </p>
+
+                    </div>
+
+
+                    <div class="methodology-card">
+
+                        <span>
+                            04
+                        </span>
+
+                        <h3>
+                            Analyse
+                        </h3>
+
+                        <p>
+                            Separate observed evidence from supported
+                            hypotheses and unconfirmed possibilities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="methodology-card">
+
+                        <span>
+                            05
+                        </span>
+
+                        <h3>
+                            Map
+                        </h3>
+
+                        <p>
+                            Map relevant adversary behaviours to MITRE ATT&CK
+                            techniques.
+                        </p>
+
+                    </div>
+
+
+                    <div class="methodology-card">
+
+                        <span>
+                            06
+                        </span>
+
+                        <h3>
+                            Respond
+                        </h3>
+
+                        <p>
+                            Develop containment, remediation, recovery and
+                            monitoring recommendations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Technical Investigation -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    06 / TECHNICAL INVESTIGATION
+                </p>
+
+                <h2>
+                    Evidence Analysis
+                </h2>
+
+                <h3>
+                    Windows Authentication
+                </h3>
+
+                <p>
+                    Windows authentication events were analysed to identify
+                    failed and successful authentication activity and establish
+                    the relationship between the suspected password spraying
+                    activity and the eventual successful login.
+                </p>
+
+                <div class="code-reference">
+
+                    <strong>
+                        Relevant Windows Events
+                    </strong>
+
+                    <ul>
+
+                        <li>
+                            Event ID 4624 — Successful Logon
+                        </li>
+
+                        <li>
+                            Event ID 4625 — Failed Logon
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <h3>
+                    PowerShell Investigation
+                </h3>
+
+                <p>
+                    Following the successful authentication, the investigation
+                    examined PowerShell activity on the affected endpoint.
+                    Suspicious execution included remote script retrieval and
+                    the use of PowerShell's
+                    <code>Invoke-Expression (IEX)</code>
+                    execution mechanism.
+                </p>
+
+                <div class="code-reference">
+
+                    <strong>
+                        Relevant Windows Event
+                    </strong>
+
+                    <ul>
+
+                        <li>
+                            Event ID 4104 — PowerShell Script Block Logging
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <h3>
+                    Endpoint Discovery
+                </h3>
+
+                <p>
+                    Process and command activity was examined for evidence of
+                    host discovery, user or security-context discovery and
+                    additional post-authentication behaviour.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Findings -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    07 / FINDINGS
+                </p>
+
+                <h2>
+                    Key Findings
+                </h2>
+
+                <div class="finding-list">
+
+                    <div class="finding">
+
+                        <span class="finding-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Suspicious Authentication Pattern
+                            </h3>
+
+                            <p>
+                                Authentication activity demonstrated a pattern
+                                consistent with password spraying across
+                                multiple accounts.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="finding">
+
+                        <span class="finding-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Successful Authentication Identified
+                            </h3>
+
+                            <p>
+                                A successful authentication was identified
+                                following the suspicious authentication
+                                activity, requiring further endpoint
+                                investigation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="finding">
+
+                        <span class="finding-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Suspicious PowerShell Activity
+                            </h3>
+
+                            <p>
+                                PowerShell execution included remote script
+                                retrieval and IEX execution behaviour,
+                                increasing the likelihood that the endpoint
+                                required compromise investigation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="finding">
+
+                        <span class="finding-number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Post-Authentication Discovery
+                            </h3>
+
+                            <p>
+                                Host and security-context discovery activity
+                                was identified during the investigation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MITRE -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    08 / MITRE ATT&CK
+                </p>
+
+                <h2>
+                    Adversary Behaviour Mapping
+                </h2>
+
+                <p>
+                    Observed behaviours were assessed against the MITRE ATT&CK
+                    framework to provide a standardised representation of the
+                    investigation.
+                </p>
+
+                <div class="mitre-grid">
+
+                    <div class="mitre-card">
+
+                        <strong>
+                            Credential Access
+                        </strong>
+
+                        <span>
+                            Password Spraying
+                        </span>
+
+                    </div>
+
+
+                    <div class="mitre-card">
+
+                        <strong>
+                            Execution
+                        </strong>
+
+                        <span>
+                            PowerShell
+                        </span>
+
+                    </div>
+
+
+                    <div class="mitre-card">
+
+                        <strong>
+                            Command & Scripting Interpreter
+                        </strong>
+
+                        <span>
+                            PowerShell
+                        </span>
+
+                    </div>
+
+
+                    <div class="mitre-card">
+
+                        <strong>
+                            Discovery
+                        </strong>
+
+                        <span>
+                            Host & Security Context Discovery
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Tools -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    09 / TOOLING
+                </p>
+
+                <h2>
+                    Tools & Technologies
+                </h2>
+
+                <div class="card-tags large-tags">
+
+                    <span>
+                        Windows Event Logs
+                    </span>
+
+                    <span>
+                        PowerShell
+                    </span>
+
+                    <span>
+                        Splunk
+                    </span>
+
+                    <span>
+                        Wazuh
+                    </span>
+
+                    <span>
+                        VirusTotal
+                    </span>
+
+                    <span>
+                        Any.Run
+                    </span>
+
+                    <span>
+                        Hybrid Analysis
+                    </span>
+
+                    <span>
+                        MetaDefender
+                    </span>
+
+                    <span>
+                        Wireshark
+                    </span>
+
+                    <span>
+                        Nmap
+                    </span>
+
+                    <span>
+                        MITRE ATT&CK
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Response -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    10 / RESPONSE
+                </p>
+
+                <h2>
+                    Containment & Remediation
+                </h2>
+
+                <p>
+                    Based on the evidence identified during the investigation,
+                    recommended response actions included:
+                </p>
+
+                <ul class="case-study-list">
+
+                    <li>
+                        Isolate the potentially compromised endpoint from
+                        the network.
+                    </li>
+
+                    <li>
+                        Reset credentials associated with potentially
+                        compromised accounts.
+                    </li>
+
+                    <li>
+                        Review authentication activity for additional
+                        affected accounts or systems.
+                    </li>
+
+                    <li>
+                        Preserve relevant endpoint and authentication
+                        evidence.
+                    </li>
+
+                    <li>
+                        Investigate the source and contents of remotely
+                        retrieved PowerShell scripts.
+                    </li>
+
+                    <li>
+                        Review persistence mechanisms and additional
+                        post-compromise activity.
+                    </li>
+
+                    <li>
+                        Strengthen authentication controls and implement
+                        MFA where appropriate.
+                    </li>
+
+                    <li>
+                        Increase monitoring for similar authentication and
+                        PowerShell activity.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Lessons Learned -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    11 / LESSONS LEARNED
+                </p>
+
+                <h2>
+                    Investigation Lessons
+                </h2>
+
+                <p>
+                    This investigation reinforced the importance of correlating
+                    authentication telemetry with endpoint activity rather than
+                    treating a successful login as an isolated event.
+                </p>
+
+                <p>
+                    The investigation also demonstrated how PowerShell logging
+                    can provide valuable visibility into post-authentication
+                    activity and how combining multiple evidence sources can
+                    produce a more defensible assessment of potential
+                    compromise.
+                </p>
+
+                <p>
+                    A key principle applied throughout the investigation was
+                    distinguishing confirmed observations from assumptions.
+                    Conclusions were therefore based on available evidence and
+                    clearly documented limitations.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Limitations -->
+
+        <section class="case-study-section">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    12 / LIMITATIONS
+                </p>
+
+                <h2>
+                    Investigation Scope
+                </h2>
+
+                <p>
+                    This investigation was conducted as a simulated laboratory
+                    scenario using synthetic security telemetry. It does not
+                    represent a real client engagement or professional
+                    cybersecurity employment.
+                </p>
+
+                <p>
+                    Findings and recommendations are therefore intended to
+                    demonstrate investigation methodology, technical reasoning
+                    and security analysis rather than claim real-world
+                    incident response experience.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Full Report -->
+
+        <section class="case-study-section case-study-cta">
+
+            <div class="container">
+
+                <p class="eyebrow">
+                    13 / TECHNICAL EVIDENCE
+                </p>
+
+                <h2>
+                    Explore the Full Investigation
+                </h2>
+
+                <p>
+                    The complete technical investigation, evidence,
+                    timeline, MITRE ATT&CK mapping, recommendations and
+                    supporting documentation are available in my SOC Analyst
+                    Playbook repository.
+                </p>
+
+                <div class="case-study-actions">
+
+                    <a
+                        href="https://github.com/suavesigley/SOC_Analyst_playbook/tree/main/reports/005-Windows-Password-Spraying-Investigation"
+                        class="project-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Full Investigation →
+                    </a>
+
+                    <a
+                        href="../index.html#projects"
+                        class="project-link secondary-link"
+                    >
+                        ← Back to Projects
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- Footer -->
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 Joshua Sigley. All rights reserved.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
