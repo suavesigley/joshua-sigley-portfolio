@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Project Hydra — Joshua Sigley's hands-on cybersecurity and infrastructure laboratory."
+>
+
+<meta
+    name="author"
+    content="Joshua Sigley"
+>
+
+<title>Project Hydra | Joshua Sigley</title>
+
+<link rel="stylesheet" href="../css/style.css">
+```
+
+</head>
+
+<body>
+
+```
+<!-- Navigation -->
+
+<header class="site-header">
+
+    <nav class="navigation">
+
+        <a href="../index.html" class="logo">
+            JOSHUA SIGLEY
+        </a>
+
+        <div class="nav-links">
+
+            <a href="../index.html#about">
+                About
+            </a>
+
+            <a href="../index.html#projects">
+                Projects
+            </a>
+
+            <a href="../index.html#labs">
+                Labs
+            </a>
+
+            <a href="../index.html#certifications">
+                Certifications
+            </a>
+
+            <a href="../index.html#writing">
+                Writing
+            </a>
+
+        </div>
+
+        <a
+            href="../index.html#contact"
+            class="nav-contact"
+        >
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <!-- Case Study Header -->
+
+    <section class="case-study">
+
+        <div class="case-study-header">
+
+            <p class="eyebrow">
+                PROJECT 02 · CYBERSECURITY & INFRASTRUCTURE
+            </p>
+
+            <h1>
+                Project Hydra
+            </h1>
+
+            <p class="case-study-intro">
+                A hands-on IT and cybersecurity home lab built progressively
+                across five phases, covering hardware diagnosis, operating
+                system deployment, server configuration, remote administration,
+                virtualisation and network segmentation.
+            </p>
+
+
+            <div class="case-study-meta">
+
+                <span>
+                    Hardware Troubleshooting
+                </span>
+
+                <span>
+                    Linux
+                </span>
+
+                <span>
+                    Ubuntu Server
+                </span>
+
+                <span>
+                    Kali Linux
+                </span>
+
+                <span>
+                    Samba
+                </span>
+
+                <span>
+                    SSH
+                </span>
+
+                <span>
+                    VirtualBox
+                </span>
+
+                <span>
+                    pfSense
+                </span>
+
+                <span>
+                    Network Segmentation
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Overview -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Project Overview
+            </h2>
+
+            <p>
+                Project Hydra was developed as a practical home laboratory
+                to build hands-on experience across IT infrastructure and
+                cybersecurity.
+            </p>
+
+            <p>
+                The project began with four non-working computers and
+                progressively developed into a functional environment
+                containing Linux systems, a file server, remote administration
+                capabilities and an isolated virtual cybersecurity network.
+            </p>
+
+            <p>
+                Each phase built on the previous phase, moving from
+                foundational hardware and operating-system knowledge toward
+                infrastructure and security lab capabilities.
+            </p>
+
+        </div>
+
+
+        <!-- Phase 1 -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Phase 01 — Hardware Diagnosis & Troubleshooting
+            </h2>
+
+            <h3>
+                Objective
+            </h3>
+
+            <p>
+                Diagnose and identify the hardware issues affecting four
+                non-working computers and restore usable hardware where
+                practical.
+            </p>
+
+            <h3>
+                Work Performed
+            </h3>
+
+            <ul>
+
+                <li>
+                    Used a SystemRescue USB to boot the systems.
+                </li>
+
+                <li>
+                    Performed CPU and hard-drive diagnostic testing.
+                </li>
+
+                <li>
+                    Physically inspected components including RAM and
+                    hard-drive connections.
+                </li>
+
+                <li>
+                    Compared symptoms and diagnostic results across the
+                    four systems.
+                </li>
+
+            </ul>
+
+            <h3>
+                Outcome
+            </h3>
+
+            <p>
+                The investigation identified multiple hardware failures
+                across the systems, including failed storage and a failed
+                CPU. The desktop was successfully repaired by installing
+                a 1TB SSD and two new RAM sticks.
+            </p>
+
+        </div>
+
+
+        <!-- Phase 2 -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Phase 02 — Operating System Installation & Configuration
+            </h2>
+
+            <h3>
+                Objective
+            </h3>
+
+            <p>
+                Deploy dedicated operating systems on two repaired laptops
+                and configure them for specific roles within the home lab.
+            </p>
+
+            <h3>
+                Work Performed
+            </h3>
+
+            <ul>
+
+                <li>
+                    Created bootable USB installation media.
+                </li>
+
+                <li>
+                    Installed Kali Linux on the HP Pavilion for
+                    cybersecurity projects.
+                </li>
+
+                <li>
+                    Installed Ubuntu Server on the Toshiba Satellite
+                    for server functionality.
+                </li>
+
+                <li>
+                    Troubleshot and resolved installation issues during
+                    deployment.
+                </li>
+
+            </ul>
+
+            <h3>
+                Outcome
+            </h3>
+
+            <p>
+                Both systems were successfully deployed and configured.
+                The HP Pavilion became the Kali Linux cybersecurity
+                workstation, while the Toshiba Satellite became the
+                Ubuntu Server platform for subsequent lab development.
+            </p>
+
+        </div>
+
+
+        <!-- Phase 3 -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Phase 03 — File Server & Help Desk Implementation
+            </h2>
+
+            <h3>
+                Objective
+            </h3>
+
+            <p>
+                Transform the Toshiba Satellite into a functional file
+                server and centralise shared resources within the home
+                network.
+            </p>
+
+            <h3>
+                Work Performed
+            </h3>
+
+            <ul>
+
+                <li>
+                    Installed and configured Samba on Ubuntu Server.
+                </li>
+
+                <li>
+                    Created a dedicated shared folder.
+                </li>
+
+                <li>
+                    Configured the Samba share through
+                    <code>smb.conf</code>.
+                </li>
+
+                <li>
+                    Created server user accounts.
+                </li>
+
+                <li>
+                    Configured permissions for access to the shared
+                    resources.
+                </li>
+
+                <li>
+                    Connected two other laptops to the shared server.
+                </li>
+
+            </ul>
+
+            <h3>
+                Outcome
+            </h3>
+
+            <p>
+                The Toshiba Satellite was successfully configured as a
+                centrally managed file server. The environment provided
+                practical experience with Linux administration, service
+                configuration, configuration files and user permissions.
+            </p>
+
+        </div>
+
+
+        <!-- Phase 4 -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Phase 04 — Remote Administration & Access
+            </h2>
+
+            <h3>
+                Objective
+            </h3>
+
+            <p>
+                Demonstrate the ability to remotely manage the Ubuntu
+                server from another machine without requiring physical
+                access to the server.
+            </p>
+
+            <h3>
+                Work Performed
+            </h3>
+
+            <ul>
+
+                <li>
+                    Used SSH from the Kali Linux laptop.
+                </li>
+
+                <li>
+                    Established a remote connection to the Ubuntu server.
+                </li>
+
+                <li>
+                    Practised executing commands remotely.
+                </li>
+
+                <li>
+                    Managed files without a physical keyboard or monitor
+                    attached to the server.
+                </li>
+
+            </ul>
+
+            <h3>
+                Outcome
+            </h3>
+
+            <p>
+                The Ubuntu server could be administered remotely from the
+                Kali Linux workstation, demonstrating practical experience
+                with remote Linux administration and SSH-based access.
+            </p>
+
+        </div>
+
+
+        <!-- Phase 5 -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Phase 05 — Virtualisation & Network Segmentation
+            </h2>
+
+            <h3>
+                Objective
+            </h3>
+
+            <p>
+                Build an isolated virtual cybersecurity environment that
+                could be used to safely practise offensive and defensive
+                security techniques without placing the wider network at
+                risk.
+            </p>
+
+            <h3>
+                Work Performed
+            </h3>
+
+            <ul>
+
+                <li>
+                    Installed and configured VirtualBox as the hypervisor.
+                </li>
+
+                <li>
+                    Deployed pfSense as a virtual firewall.
+                </li>
+
+                <li>
+                    Configured pfSense to provide a separate lab network.
+                </li>
+
+                <li>
+                    Created a Kali Linux virtual machine for security
+                    testing.
+                </li>
+
+                <li>
+                    Created a Metasploitable virtual machine as an
+                    intentionally vulnerable target.
+                </li>
+
+                <li>
+                    Created an Ubuntu desktop virtual machine representing
+                    a normal user system.
+                </li>
+
+            </ul>
+
+            <h3>
+                Outcome
+            </h3>
+
+            <p>
+                A functional isolated virtual lab was successfully built.
+                The environment provides a controlled network in which
+                security techniques and vulnerabilities can be studied
+                without directly exposing the live network.
+            </p>
+
+        </div>
+
+
+        <!-- Architecture -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Lab Architecture
+            </h2>
+
+            <p>
+                The completed environment progressed from physical systems
+                into a virtualised security laboratory. The final phase
+                introduced distinct virtual roles for the firewall,
+                attacker, vulnerable target and user workstation.
+            </p>
+
+            <ul>
+
+                <li>
+                    <strong>Virtualisation Host:</strong>
+                    Ubuntu Server desktop environment
+                </li>
+
+                <li>
+                    <strong>Firewall:</strong>
+                    pfSense
+                </li>
+
+                <li>
+                    <strong>Attacker:</strong>
+                    Kali Linux
+                </li>
+
+                <li>
+                    <strong>Target:</strong>
+                    Metasploitable
+                </li>
+
+                <li>
+                    <strong>User System:</strong>
+                    Ubuntu Desktop
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Skills -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Skills Demonstrated
+            </h2>
+
+            <div class="card-tags">
+
+                <span>
+                    Hardware Diagnosis
+                </span>
+
+                <span>
+                    System Troubleshooting
+                </span>
+
+                <span>
+                    Linux Administration
+                </span>
+
+                <span>
+                    Ubuntu Server
+                </span>
+
+                <span>
+                    Kali Linux
+                </span>
+
+                <span>
+                    Samba
+                </span>
+
+                <span>
+                    User Permissions
+                </span>
+
+                <span>
+                    SSH
+                </span>
+
+                <span>
+                    VirtualBox
+                </span>
+
+                <span>
+                    pfSense
+                </span>
+
+                <span>
+                    Network Segmentation
+                </span>
+
+                <span>
+                    Virtualisation
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Key Outcomes -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Key Outcomes
+            </h2>
+
+            <ul>
+
+                <li>
+                    Repaired and repurposed previously non-functional
+                    hardware.
+                </li>
+
+                <li>
+                    Deployed Linux operating systems for dedicated lab
+                    roles.
+                </li>
+
+                <li>
+                    Built and configured a functional Ubuntu file server.
+                </li>
+
+                <li>
+                    Implemented shared storage and basic user access
+                    controls.
+                </li>
+
+                <li>
+                    Established remote server administration using SSH.
+                </li>
+
+                <li>
+                    Built an isolated virtual security environment using
+                    VirtualBox and pfSense.
+                </li>
+
+                <li>
+                    Created attacker, target and user virtual machines
+                    for controlled security experimentation.
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- Repository -->
+
+        <div class="case-study-section">
+
+            <h2>
+                Project Documentation
+            </h2>
+
+            <p>
+                The complete phase-by-phase technical documentation,
+                including the original implementation notes, is available
+                in the Project Hydra repository.
+            </p>
+
+            <a
+                href="https://github.com/suavesigley/Project-hydra-1.0"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="project-link"
+            >
+                View Project Hydra on GitHub →
+            </a>
+
+        </div>
+
+
+        <!-- Back -->
+
+        <a
+            href="../index.html#projects"
+            class="case-study-back"
+        >
+            ← Back to Projects
+        </a>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="footer-content">
+
+        <strong>
+            JOSHUA SIGLEY
+        </strong>
+
+        <span>
+            Cyber Security Analyst
+        </span>
+
+        <span>
+            © 2026 Joshua Sigley
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="../js/script.js"></script>
+```
+
+</body>
+
+</html>
