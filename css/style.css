@@ -132,7 +132,7 @@ a {
 }
 
 .logo {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 
     font-weight: 800;
 
@@ -152,7 +152,7 @@ a {
 .nav-links a {
     color: var(--text-muted);
 
-    font-size: 0.82rem;
+    font-size: 0.90rem;
 
     font-weight: 500;
 
@@ -232,7 +232,7 @@ main {
 
     color: var(--accent);
 
-    font-size: 0.72rem;
+    font-size: 0.78rem;
 
     font-weight: 800;
 
@@ -400,7 +400,7 @@ main {
 
     margin-bottom: 1.25rem;
 
-    font-size: 0.7rem;
+    font-size: 0.78rem;
 
     font-weight: 800;
 
@@ -412,7 +412,7 @@ main {
 .status-indicator {
     color: var(--success);
 
-    font-size: 0.65rem;
+    font-size: 0.7rem;
 }
 
 .status-indicator::before {
@@ -452,7 +452,7 @@ main {
 
     border-bottom: 1px solid var(--border);
 
-    font-size: 0.78rem;
+    font-size: 0.85rem;
 }
 
 .profile-item span {
@@ -476,7 +476,7 @@ main {
 
     color: var(--text-muted);
 
-    font-size: 0.65rem;
+    font-size: 0.70rem;
 
     letter-spacing: 0.1em;
 }
@@ -1049,6 +1049,93 @@ footer {
 
 
 /* =========================
+   BLOG ARTICLE
+========================= */
+
+.blog-post {
+    width: min(100% - 3rem, 900px);
+
+    margin: 0 auto;
+
+    padding: 6rem 0 8rem;
+}
+
+.blog-post > .section-heading {
+    max-width: 800px;
+
+    margin: 0 auto 4rem;
+
+    text-align: left;
+}
+
+.blog-post > .section-heading h1 {
+    max-width: 800px;
+
+    margin-bottom: 1.5rem;
+
+    font-size: clamp(2.8rem, 6vw, 5rem);
+
+    line-height: 1;
+
+    letter-spacing: -0.045em;
+}
+
+.blog-post > .section-heading p {
+    max-width: 700px;
+
+    color: var(--text-secondary);
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+.blog-content {
+    max-width: 720px;
+
+    margin: 0 auto;
+}
+
+.blog-content p {
+    margin-bottom: 1.5rem;
+
+    color: var(--text-secondary);
+
+    font-size: 1rem;
+
+    line-height: 1.85;
+}
+
+.blog-content h2 {
+    margin: 4rem 0 1.5rem;
+
+    font-size: 1.8rem;
+
+    line-height: 1.2;
+}
+
+.blog-content ul {
+    margin: 1rem 0 2rem;
+
+    padding-left: 1.5rem;
+
+    color: var(--text-secondary);
+}
+
+.blog-content li {
+    margin-bottom: 0.75rem;
+
+    line-height: 1.75;
+}
+
+.blog-content strong {
+    color: var(--text);
+
+    font-weight: 600;
+}
+
+
+/* =========================
    RESPONSIVE
 ========================= */
 
@@ -1099,6 +1186,10 @@ footer {
 
         padding: 5rem 0;
     }
+
+    .blog-post {
+        width: min(100% - 2rem, 900px);
+    }
 }
 
 
@@ -1135,77 +1226,10 @@ footer {
     .case-study-header h1 {
         font-size: clamp(2.5rem, 12vw, 4rem);
     }
-}
-```css
-/* =========================================
-   BLOG ARTICLE
-   ========================================= */
-
-.blog-post {
-    width: min(100% - 3rem, 900px);
-    margin: 0 auto;
-    padding: 6rem 0 8rem;
-}
-
-.blog-post > .section-heading {
-    max-width: 800px;
-    margin: 0 auto 4rem;
-    text-align: left;
-}
-
-.blog-post > .section-heading h1 {
-    max-width: 800px;
-    margin-bottom: 1.5rem;
-    font-size: clamp(2.8rem, 6vw, 5rem);
-    line-height: 1;
-    letter-spacing: -0.045em;
-}
-
-.blog-post > .section-heading p {
-    max-width: 700px;
-    color: var(--text-secondary);
-    font-size: 1.05rem;
-    line-height: 1.8;
-}
-
-.blog-content {
-    max-width: 720px;
-    margin: 0 auto;
-}
-
-.blog-content p {
-    margin-bottom: 1.5rem;
-    color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.85;
-}
-
-.blog-content h2 {
-    margin: 4rem 0 1.5rem;
-    font-size: 1.8rem;
-    line-height: 1.2;
-}
-
-.blog-content ul {
-    margin: 1rem 0 2rem;
-    padding-left: 1.5rem;
-    color: var(--text-secondary);
-}
-
-.blog-content li {
-    margin-bottom: 0.75rem;
-    line-height: 1.75;
-}
-
-.blog-content strong {
-    color: var(--text);
-    font-weight: 600;
-}
-
-@media (max-width: 650px) {
 
     .blog-post {
         width: min(100% - 2rem, 900px);
+
         padding: 4rem 0 6rem;
     }
 
@@ -1220,5 +1244,4 @@ footer {
     .blog-content {
         max-width: 100%;
     }
-
 }
