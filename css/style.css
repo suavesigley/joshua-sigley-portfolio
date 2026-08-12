@@ -1297,18 +1297,24 @@ footer {
    ========================================= */
 
 .tryhackme-card {
-    margin-top: 3rem;
+    width: min(100% - 3rem, var(--max-width));
+
+    margin: 3rem auto 0;
+
     padding: 2rem;
 
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius);
 
     background:
         linear-gradient(
             145deg,
-            rgba(19, 29, 46, 0.8),
-            rgba(13, 20, 34, 0.8)
+            rgba(19, 29, 46, 0.95),
+            rgba(13, 20, 34, 0.95)
         );
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.18);
 
     transition:
         transform 0.25s ease,
@@ -1317,8 +1323,12 @@ footer {
 
 .tryhackme-card:hover {
     transform: translateY(-4px);
-    border-color: var(--border-strong);
+
+    border-color: var(--primary);
 }
+
+
+/* HEADER */
 
 .tryhackme-header {
     display: flex;
@@ -1328,22 +1338,29 @@ footer {
 
     gap: 2rem;
 
-    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+
+    border-bottom: 1px solid var(--border);
 }
 
 .tryhackme-header .eyebrow {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.75rem;
 }
 
 .tryhackme-header h3 {
-    font-size: 1.8rem;
+    margin: 0;
+
+    font-size: 2rem;
     line-height: 1.2;
 }
 
-.tryhackme-status {
-    padding: 0.35rem 0.65rem;
 
-    border: 1px solid rgba(34, 197, 94, 0.3);
+/* STATUS */
+
+.tryhackme-status {
+    padding: 0.4rem 0.75rem;
+
+    border: 1px solid rgba(34, 197, 94, 0.35);
     border-radius: 4px;
 
     color: var(--success);
@@ -1351,28 +1368,37 @@ footer {
     font-family: monospace;
     font-size: 0.65rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
 
-    white-space: nowrap;
+    letter-spacing: 0.08em;
 }
+
+
+/* STATS */
 
 .tryhackme-content {
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
 
-    gap: 1rem;
+    gap: 0;
 
-    margin-bottom: 2rem;
+    margin-top: 1.25rem;
+
+    border-bottom: 1px solid var(--border);
 }
 
 .tryhackme-stat {
-    padding: 1.25rem;
+    padding: 1.25rem 1.5rem;
 
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    border-right: 1px solid var(--border);
+}
 
-    background: rgba(7, 11, 20, 0.35);
+.tryhackme-stat:first-child {
+    padding-left: 0;
+}
+
+.tryhackme-stat:last-child {
+    border-right: none;
 }
 
 .tryhackme-stat strong {
@@ -1382,7 +1408,8 @@ footer {
 
     color: var(--text);
 
-    font-size: 1.25rem;
+    font-size: 1.4rem;
+    font-weight: 800;
 }
 
 .tryhackme-stat span {
@@ -1391,34 +1418,56 @@ footer {
     font-size: 0.72rem;
 }
 
+
+/* FOOTER */
+
 .tryhackme-footer {
     display: flex;
 
     align-items: center;
     justify-content: space-between;
 
-    gap: 2rem;
+    gap: 3rem;
 
     padding-top: 1.5rem;
-
-    border-top: 1px solid var(--border);
 }
 
 .tryhackme-footer p {
-    max-width: 650px;
+    max-width: 720px;
 
     margin: 0;
 
-    color: var(--text-muted);
+    color: var(--text-secondary);
 
-    font-size: 0.85rem;
-    line-height: 1.7;
+    font-size: 0.88rem;
+
+    line-height: 1.75;
 }
 
 .tryhackme-footer .project-link {
-    padding-top: 0;
+    flex-shrink: 0;
+
+    padding: 0.7rem 1rem;
+
+    border: 1px solid var(--border-strong);
+    border-radius: 6px;
+
+    color: var(--text-secondary);
 
     white-space: nowrap;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.tryhackme-footer .project-link:hover {
+    border-color: var(--primary);
+
+    background: rgba(59, 130, 246, 0.08);
+
+    color: var(--text);
 }
 
 
@@ -1426,7 +1475,28 @@ footer {
    TRYHACKME RESPONSIVE
    ========================================= */
 
+@media (max-width: 900px) {
+
+    .tryhackme-card {
+        width: min(100% - 2rem, var(--max-width));
+    }
+
+    .tryhackme-footer {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 1.5rem;
+    }
+
+}
+
+
 @media (max-width: 650px) {
+
+    .tryhackme-card {
+        padding: 1.5rem;
+    }
 
     .tryhackme-header {
         flex-direction: column;
@@ -1434,14 +1504,23 @@ footer {
         gap: 1rem;
     }
 
+    .tryhackme-header h3 {
+        font-size: 1.7rem;
+    }
+
     .tryhackme-content {
         grid-template-columns: 1fr;
     }
 
-    .tryhackme-footer {
-        flex-direction: column;
+    .tryhackme-stat {
+        padding: 1rem 0;
 
-        align-items: flex-start;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .tryhackme-stat:last-child {
+        border-bottom: none;
     }
 
 }
